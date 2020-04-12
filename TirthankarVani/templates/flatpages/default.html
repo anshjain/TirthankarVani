@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{{ flatpage.title }}{% endblock %}
+
+{% block main %}
+
+    <div class="w3-content w3-justify w3-text-black w3-padding-64" id= '{{ flatpage.url|slice:"1:-1" }}' >
+        <h2 class="w3-text-light-black" style="text-decoration: underline;">{{ flatpage.title }}</h2>
+        <p>{{ flatpage.content }}</p>
+        <div style="text-align:center;"><b>~~~~ *** ~~~~</b></div>
+    </div>
+{% endblock %}
