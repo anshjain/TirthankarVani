@@ -18,15 +18,18 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.contrib.flatpages import views
+from django.views.generic.base import TemplateView
 
+admin.site.site_header = 'Tirthankar Vani'
+admin.site.site_title = 'Tirthankar Vani admin'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.flatpage, {'url': '/navkar/'}, name='navkar'),
+    path('', TemplateView.as_view(template_name='base.html'), name='home'),
+    path('navkar/', views.flatpage, {'url': '/navkar/'}, name='navkar'),
     path('tirthankar/', views.flatpage, {'url': '/tirthankar/'}, name='tirthankar'),
     path('pooja/', views.flatpage, {'url': '/pooja/'}, name='pooja'),
     path('stotra/', views.flatpage, {'url': '/stotra/'}, name='stotra'),
-    path('vinay-paath/', views.flatpage, {'url': '/vinay-paath/'}, name='vinay-paath'),
     path('more/', views.flatpage, {'url': '/more/'}, name='more'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + \
               static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
