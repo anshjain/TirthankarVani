@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls.static import static
 from django.contrib.flatpages import views
 from django.views.generic.base import TemplateView
@@ -25,6 +25,7 @@ admin.site.site_title = 'Tirthankar Vani admin'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('tinymce/', include('tinymce.urls')),
     path('', TemplateView.as_view(template_name='base.html'), name='home'),
     path('navkar/', views.flatpage, {'url': '/navkar/'}, name='navkar'),
     path('tirthankar/', views.flatpage, {'url': '/tirthankar/'}, name='tirthankar'),

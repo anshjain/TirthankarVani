@@ -1,14 +1,19 @@
 {% extends "base.html" %}
 
-{% load static i18n %}
+{% load static i18n vani_tags %}
 
 {% block title %}{{ flatpage.title }}{% endblock %}
 
 {% block main %}
 
-    <div class="w3-content w3-justify w3-text-black w3-padding-64" id= '{{ flatpage.url|slice:"1:-1" }}' >
+    <div class="w3-content w3-justify w3-text-black w3-padding-64" id= '{{ flatpage.url|lastValue }}' >
         <h2 class="w3-text-light-black" style="text-decoration: underline; text-align:center;">{{ flatpage.title }}</h2>
-        <p>{{ flatpage.content }}</p>
+        <div class="w3-hide-small">
+            {{ flatpage.content }}
+        </div>
+        <div class="w3-hide-large w3-hide-medium w3-small">
+            {{ flatpage.content }}
+        </div>
         <div style="text-align:center;"><b>~~~~ *** ~~~~</b></div>
     </div>
 {% endblock %}
