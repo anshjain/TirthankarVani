@@ -1,13 +1,11 @@
 
 .odd {
-    background: #fdf5e6;
     border: lightgray;
     padding: 5px;
     font-weight: bold;
 }
 
 .even {
-    background: #fdf5e6;
     border: white;
     padding: 5px;
     font-weight: bold;
@@ -28,12 +26,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd;
 }
 
 th, td {
   text-align: left;
   padding: 8px;
+}
+
+.center {
+  text-align: center;
 }
 
 tr:nth-child(even){background-color: #f2f2f2}

@@ -1,28 +1,28 @@
 {% load i18n static %}
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-sand w3-bar-block w3-small w3-hide-small w3-center">
+<nav class="w3-sidebar w3-white w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <a href="{% url 'home' %}">
-    <img src="{% static 'images/om-avatar-small.png' %}" style="width:100%">
+    <img src="{% static 'images/om-avatar-small-white.png' %}" style="width:100%">
   </a>
-  <a href="{% url 'navkar' %}#navkar" class="w3-bar-item w3-button w3-padding-large {% if 'navkar' in request.path %} w3-pale-yellow {% endif %} w3-hover-pale-yellow">
+  <a href="{% url 'navkar' %}#navkar" class="w3-bar-item w3-button w3-padding-large {% if 'navkar' in request.path %} w3-orange {% endif %} w3-hover-orange">
     <i><img src="{% static 'images/navkar.svg.png' %}" height="25px" /></i>
     <p>NAVKAR</p>
   </a>
-  <a href="{% url 'tirthankar' %}#tirthankar" class="w3-bar-item w3-button w3-padding-large {% if 'tirthankar' in request.path %} w3-pale-yellow {% endif %} w3-hover-pale-yellow">
-    <i><img src="{% static 'images/om-avatar-small.png' %}" height="25px" /></i>
+  <a href="{% url 'tirthankar' %}#tirthankar" class="w3-bar-item w3-button w3-padding-large {% if 'tirthankar' in request.path %} w3-orange {% endif %} w3-hover-orange">
+    <i><img src="{% static 'images/om-small-white.png' %}" height="25px" /></i>
     <p>TIRTHANKAR</p>
   </a>
-  <a href="{% url 'pooja' %}#pooja" class="w3-bar-item w3-button w3-padding-large {% if 'pooja' in request.path %} w3-pale-yellow {% endif %} w3-hover-pale-yellow">
+  <a href="{% url 'pooja' %}#pooja" class="w3-bar-item w3-button w3-padding-large {% if 'pooja' in request.path %} w3-orange {% endif %} w3-hover-orange">
     <i><img src="{% static 'images/prayer.png' %}" height="25px" /></i>
     <p>POOJA VIDHI</p>
   </a>
-  <a href="{% url 'stotra' %}#stotra" class="w3-bar-item w3-button w3-padding-large {% if 'stotra' in request.path %} w3-pale-yellow {% endif %} w3-hover-pale-yellow">
+  <a href="{% url 'stotra' %}#stotra" class="w3-bar-item w3-button w3-padding-large {% if 'stotra' in request.path %} w3-orange {% endif %} w3-hover-orange">
     <i class="fa fa-book w3-xxlarge"></i>
     <p>STOTRA</p>
   </a>
-  <a href="{% url 'more' %}#more" class="w3-bar-item w3-button w3-padding-large {% if 'more' in request.path %} w3-pale-yellow {% endif %} w3-hover-pale-yellow">
+  <a href="{% url 'more' %}#more" class="w3-bar-item w3-button w3-padding-large {% if 'more' in request.path %} w3-orange {% endif %} w3-hover-orange">
     <i class="fa fa-plus-circle w3-xxlarge"></i>
     <p>MORE</p>
   </a>
@@ -30,7 +30,7 @@
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-bottom w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-orange w3-opacity w3-hover-opacity-off w3-center w3-small w3-text-black">
+  <div class="w3-bar w3-orange w3-hover-opacity-off w3-center w3-small w3-text-black">
     <a href="{% url 'navkar' %}#navkar" class="w3-bar-item w3-button {% if 'navkar' in request.path %} w3-pale-yellow {% endif %}" style="width:20% !important">NAVKAR</a>
     <a href="{% url 'tirthankar' %}#tirthankar" class="w3-bar-item w3-button {% if 'tirthankar' in request.path %} w3-pale-yellow {% endif %}" style="width:20% !important">Tirthankar</a>
     <a href="{% url 'pooja' %}#pooja" class="w3-bar-item w3-button {% if 'pooja' in request.path %} w3-pale-yellow {% endif %}" style="width:20% !important">POOJA</a>
